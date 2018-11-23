@@ -148,7 +148,7 @@ void ipmcast_receiver_thread(int num_packets)
 	/* initialize socket information and bind the socket */
 	memset((char *)&localSock, 0, sizeof(localSock));
 	localSock.sin_family = AF_INET;
-	localSock.sin_port = htons(g_app_target_port);;
+	localSock.sin_port = htons(g_app_target_port);
 	localSock.sin_addr.s_addr = INADDR_ANY;
 
 	if (bind(sd, (struct sockaddr *)&localSock, sizeof(localSock))) {
